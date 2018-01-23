@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+
+{% block header %}
+    <h1 class="text-primary text-center">Handwritten Digits Classification</h1>
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <!-- Canvas -->
+        <div class="col-lg-6 col-md-6 col-sm-12" id="canvas">
+            <h3>Write a digit using mouse</h3>
+            <div class="row" style="padding: 10px">
+                <div class="col-md-2"><button id="clearBTN" class="btn btn-md btn-danger">Clear <span class="glyphicon glyphicon-remove-circle"></span></button></div>
+                <div class="col-md-2 text-right" style="font-weight: bold; margin-top: -5px">Pencil Size:</div>
+                <div class="col-md-2"><button id="smallerBTN" class="btn btn-md btn-default">Smaller <span class="glyphicon glyphicon-arrow-down"></span></button></div>
+                <div class="col-md-2"><button id="largerBTN" class="btn btn-md btn-default">&nbsp;Larger <span class="glyphicon glyphicon-arrow-up"></span></button></div>
+                <div class="col-md-offset-1 col-md-3"><button id="submitBTN" class="btn btn-md btn-primary">Submit <span class="glyphicon glyphicon-play"></span></button></div>
+            </div>
+            <p>Pencil / Eraser size is <span id="pencis_eraser_size" class="text-primary" style="font-weight: bold">Normal</span></p>
+            <canvas id="main"></canvas>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="row">
+                <!-- Image -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h3>Written digit</h3>
+                    <canvas id="img" style="border: 1px solid #9d9d9d;" width="260" height="260"></canvas>
+                </div>
+
+                <!-- Results table -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h3>Results</h3>  
+                    <div id="results_table"></div>
+                </div>
+            </div>
+            <!-- Word cloud -->
+            <div class="row" id="wordcloud"></div>
+        </div>    
+    </div>
+</div>
+{% endblock %}

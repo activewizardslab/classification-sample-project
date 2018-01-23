@@ -1,0 +1,140 @@
+.col-sm-5cols{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+.col-sm-5cols {
+        width: 20%;
+        float: left;
+    }
+}
+
+.box {
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding-top: 5px; padding-bottom: 15px; padding-left: 10px; padding-right: 20px;
+	margin-top: 5px;
+}
+
+#uploaded_image, #classes {
+	padding: 10px;
+	min-height: 500px;
+	height: 500px;
+	max-height: 500px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#uploaded_image {
+	border: 1px solid #eee;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.main_image {
+	vertical-align: middle;
+	width: auto;
+	height : auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+
+.test-img:hover {
+    opacity: .75;
+	border: 4px solid #fff;
+}
+
+#xAxis .domain {
+	fill: none;
+	stroke: none;
+}
+#xAxis text {
+	font-size: 14px;
+}
+
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   opacity: 0.7;
+   background-color: #fff;
+   z-index: 99;
+   text-align: center;
+}
+
+#loading-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+
+
+.menu-button {
+    position: absolute;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #f9f9ff;
+    border: 1px solid #e6e6ff;
+    border-bottom: 1px solid #f9f9ff;
+    min-width: 385px;
+    min-height: 50px;
+    /*z-index: 999;*/
+}
+
+.menu-button-accident {
+    position: absolute;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #f9f9ff;
+    border: 1px solid #e6e6ff;
+    border-bottom: 1px solid #f9f9ff;
+    min-width: 575px;
+    min-height: 50px;
+    /*z-index: 999;*/
+}
+.menu-button:focus {
+    outline: none;
+}
+
+.menu-button-accident:focus {
+    outline: none;
+}
+
+.inactive-button-accident {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6ff;
+}
+
+
+.inactive-button {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6ff;
+}
+
+
+#select_image_clas {
+    margin-left: 15px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 15px;
+}
+
+
+#select_num_rec {
+  margin-left: 770px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 15px;
+}
+
+
+

@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block header %}
+	<h1 class="text-primary text-center">Image Classification</h1>
+{% endblock %}
+
+{% block main %}
+    <div id="loading">
+       <img id="loading-image" src="{{ url_for('static', filename = 'images/') }}ajax-loading.gif" alt="Loading..." />
+    </div>
+    
+  	<!-- Start Image Classification -->
+    <div class="row">
+        <!-- Upload -->
+        <div class="col-lg-6 col-md-6 col-sm-12 box">
+            <h3>Upload the image</h3>
+            <form class="form-inline" id="upload_file" method="POST" enctype="multipart/form-data">
+                <div class="col-md-10">
+                    <input type="file" id="file_input" name="file">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary" id="upload_file_btn" type="button">Upload</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Link -->
+        <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-12 box">
+            <h3>Or insert the link</h3>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="image_url" placeholder="Insert the link here">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" id="link_file_btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12" id="uploaded_image"></div>
+        <div class="col-lg-6 col-md-6 col-sm-12" id="classes"></div>
+    </div>
+
+    <div class="row">
+        <h3 class="bg-info" style="margin-top: 20px; padding: 10px; border-radius: 3px">If you don't have an image choose on the following</h3>
+        {% for image in images %}
+            <div class="col-xs-6 col-sm-5cols">
+                <div class="thumbnail">
+                    <img src="{{ url_for('static', filename = 'images/') }}{{ image }}.jpg" alt="{{ image }}.jpg" class="test-img" id="img_{{ image }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
